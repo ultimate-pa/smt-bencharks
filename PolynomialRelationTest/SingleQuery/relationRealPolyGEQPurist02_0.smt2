@@ -32,6 +32,6 @@ assertions from unsatisfiable cores [6].
 (declare-fun z () Real)
 (declare-fun u () Real)
 (declare-fun ri () Real)
-(assert (let ((.cse16 (/ ri u y y y z z))) (let ((.cse8 (>= x .cse16)) (.cse9 (> u 0.0)) (.cse13 (< y 0.0)) (.cse12 (< u 0.0)) (.cse14 (<= x .cse16)) (.cse10 (distinct z 0.0)) (.cse11 (> y 0.0)) (.cse15 (<= ri 0.0))) (let ((.cse1 (and .cse15 (= 0.0 u))) (.cse2 (and .cse12 .cse14 .cse10 .cse11)) (.cse3 (and .cse15 (= 0.0 y))) (.cse4 (and .cse15 (= 0.0 z))) (.cse5 (and .cse14 .cse9 .cse10 .cse13)) (.cse6 (and .cse12 .cse8 .cse10 .cse13)) (.cse7 (and .cse8 .cse9 .cse10 .cse11)) (.cse0 (>= (* x y y y z z u) ri))) (and (or .cse0 .cse1 .cse2 .cse3 .cse4 .cse5 .cse6 .cse7) (or (not (or .cse1 .cse2 .cse3 .cse4 .cse5 .cse6 .cse7)) (not .cse0)))))))
+(assert (let ((.cse16 (/ ri u y y y z z))) (let ((.cse11 (< y 0.0)) (.cse12 (< u 0.0)) (.cse8 (<= x .cse16)) (.cse13 (>= x .cse16)) (.cse9 (distinct z 0.0)) (.cse10 (> u 0.0)) (.cse15 (> y 0.0)) (.cse14 (<= ri 0.0))) (let ((.cse1 (and .cse14 (= 0.0 u))) (.cse2 (and .cse13 .cse9 .cse10 .cse15)) (.cse3 (and .cse12 .cse8 .cse9 .cse15)) (.cse4 (and .cse14 (= 0.0 y))) (.cse5 (and .cse14 (= 0.0 z))) (.cse6 (and .cse12 .cse13 .cse9 .cse11)) (.cse7 (and .cse8 .cse9 .cse10 .cse11)) (.cse0 (>= (* x y y y z z u) ri))) (and (or .cse0 .cse1 .cse2 .cse3 .cse4 .cse5 .cse6 .cse7) (or (not (or .cse1 .cse2 .cse3 .cse4 .cse5 .cse6 .cse7)) (not .cse0)))))))
 (check-sat)
 (exit)

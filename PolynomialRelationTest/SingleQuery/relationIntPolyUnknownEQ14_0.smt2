@@ -30,6 +30,6 @@ assertions from unsatisfiable cores [6].
 (declare-fun x () Int)
 (declare-fun y () Int)
 (declare-fun z () Int)
-(assert (let ((.cse0 (= (div (div x 5 2) (div y z)) y)) (.cse1 (exists ((aux_mod_11 Int) (aux_div_11 Int)) (and (= (div aux_div_11 (div y z)) y) (< aux_mod_11 10) (= x (+ aux_mod_11 (* 10 aux_div_11))) (<= 0 aux_mod_11))))) (and (or .cse0 .cse1) (or (not .cse0) (not .cse1)))))
+(assert (let ((.cse1 (= (* 3 (div x 6) (+ 5 (div y z))) (* y z))) (.cse0 (exists ((aux_mod_9 Int) (aux_div_9 Int)) (and (= x (+ aux_mod_9 (* 6 aux_div_9))) (<= 0 aux_mod_9) (< aux_mod_9 6) (= (+ (* 3 (* (div y z) aux_div_9)) (* 15 aux_div_9)) (* y z)))))) (and (or .cse0 .cse1) (or (not .cse1) (not .cse0)))))
 (check-sat)
 (exit)
